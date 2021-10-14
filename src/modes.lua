@@ -303,6 +303,23 @@ SilentRotate.modes = {
         announceArg = function(self, hunter, destName) return hunter.subgroup or 0 end,
         metadata = { groundingTotemEffectName = GetSpellInfo(8178) }, -- The buff is the name from spellId+1, not from spellId
     },
+
+    exposeArmor = {
+        project = true,
+        default = false,
+        wanted = 'ROGUE',
+        cooldown = 30, -- not actual cooldown, but no need to spam the spell more often
+        effectDuration = 30,
+        canFail = true,
+        spell = GetSpellInfo(26866),
+        -- auraTest = nil,
+        -- customCombatlogFunc = nil,
+        targetGUID = function(self, sourceGUID, destGUID) return destGUID end,
+        -- buffName = nil,
+        -- buffCanReturn = nil,
+        -- customTargetName = nil,
+        announceArg = function(self, hunter, destName) return destName end,
+    },
 }
 
 -- Create a backward compatibility map between old mode names and new ones
