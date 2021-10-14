@@ -29,16 +29,16 @@ SilentRotate.colors = {
 }
 
 SilentRotate.constants = {
-    ['hunterFrameHeight'] = 22,
+    ['hunterFrameHeight'] = 30,
     ['hunterFrameSpacing'] = 4,
-    ['titleBarHeight'] = 18,
-    ['modeBarHeight'] = 18,
+    ['titleBarHeight'] = 20,
+    ['modeBarHeight'] = 20,
     ['modeFrameFontSize'] = 12,
     ['modeFrameMargin'] = 2,
-    ['mainFrameWidth'] = 130,
+    ['mainFrameWidth'] = 200,
     ['rotationFramesBaseHeight'] = 20,
 
-    ['commsPrefix'] = 'silentrotate',
+    ['commsPrefix'] = 'rotationtracker',
 
     ['commsChannel'] = 'RAID',
 
@@ -48,7 +48,7 @@ SilentRotate.constants = {
         ['syncRequest'] = 'sync-request',
     },
 
-    ['printPrefix'] = 'SilentRotate - ',
+    ['printPrefix'] = 'rotationtracker - ',
     ['duplicateTranqshotDelayThreshold'] = 10,
 
     ['minimumCooldownElapsedForEligibility'] = 10,

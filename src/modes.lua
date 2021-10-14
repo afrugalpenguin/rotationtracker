@@ -148,7 +148,7 @@ SilentRotate.modes = {
         canFail = true,
         spell = function(self, spellId, spellName)
             return spellName == GetSpellInfo(19801) -- 'Tranquilizing Shot'
-                or spellName == GetSpellInfo(14287) and SilentRotate.testMode -- 'Arcane Shot'
+                or spellName == GetSpellInfo(20217) and SilentRotate.testMode -- 'Blessing of Kings'
         end,
         -- auraTest = nil,
         customCombatlogFunc = function(self, event, sourceGUID, sourceName, sourceFlags, destGUID, destName, spellId, spellName)

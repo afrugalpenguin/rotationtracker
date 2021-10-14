@@ -1,12 +1,12 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("SilentRotate", "enUS", true, false)
 if not L then return end
-L["LOADED_MESSAGE"] = "SilentRotate loaded, type /silentrotate for options"
-L["TRANQ_WINDOW_HIDDEN"] = "SilentRotate window hidden. Use /silentrotate toggle to get it back"
+L["LOADED_MESSAGE"] = "RotationTracker loaded, type /rt for options"
+L["TRANQ_WINDOW_HIDDEN"] = "RotationTracker window hidden. Use /rt toggle to get it back"
 
     -- Settings
 L["SETTING_GENERAL"] = "General"
 L["SETTING_GENERAL_REPORT"] = "Please report any issue at"
-L["SETTING_GENERAL_DESC"] = "Work in Progress: SilentRotate is an extension of TranqRotate. While TranqRotate is dedicated to hunter tranqshots, SilentRotate adds \"modes\" for other classes or spells."
+L["SETTING_GENERAL_DESC"] = "Work in Progress: Rotation Tracker is a fork of the excellent SilentRotate, which is a fork of TranqRotate."
 
 L["LOCK_WINDOW"] = "Lock window"
 L["LOCK_WINDOW_DESC"] = "Lock window"
@@ -20,13 +20,13 @@ L["WINDOW_LOCKED"] = "SilentRotate: Window locked"
 L["WINDOW_UNLOCKED"] = "SilentRotate: Window unlocked"
 
 L["TEST_MODE_HEADER"] = "Test mode"
-L["ENABLE_ARCANE_SHOT_TESTING"] = "Toggle testing mode"
-L["ENABLE_ARCANE_SHOT_TESTING_DESC"] =
-        "While testing mode is enabled, arcane shot will be registered as a tranqshot\n" ..
+L["ENABLE_BOK_TESTING"] = "Toggle testing mode"
+L["ENABLE_BOK_TESTING_DESC"] =
+        "While testing mode is enabled, BOK will be registered as a tranqshot\n" ..
         "Testing mode will last 60 minutes unless you toggle it off\n" ..
         "For Loatheb, testing consists in using the Recently Bandaged as the healer debuff"
-L["ARCANE_SHOT_TESTING_ENABLED"] = "Arcane shot testing mode enabled for 60 minutes"
-L["ARCANE_SHOT_TESTING_DISABLED"] = "Arcane shot testing mode disabled"
+L["BOK_TESTING_ENABLED"] = "Blessing of Kings testing mode enabled for 60 minutes"
+L["BOK_TESTING_DISABLED"] = "Blessing of Kings testing mode disabled"
 
     --- Announces
 L["SETTING_ANNOUNCES"] = "Announces"
@@ -149,22 +149,22 @@ L["SETTING_SOUNDS"] = "Sounds"
 L["ENABLE_NEXT_TO_TRANQ_SOUND"] = "Play a sound when you are the next in the rotation"
 L["ENABLE_TRANQ_NOW_SOUND"] = "Play a sound when you have to shoot your spell"
 L["TRANQ_NOW_SOUND_CHOICE"] = "Select the sound you want to use for the 'cast now' alert"
-L["DBM_SOUND_WARNING"] = "DBM is playing the 'flag taken' sound on each frenzy, it may prevent you from earing gentle sounds from SilentRotate. I would either suggest to pick a strong sound or disable DBM frenzy sound."
+L["DBM_SOUND_WARNING"] = "DBM is playing the 'flag taken' sound on each frenzy, it may prevent you from earing gentle sounds from RotationTracker. I would either suggest to pick a strong sound or disable DBM frenzy sound."
 
     --- Icons
-L["DISPLAY_BLIND_ICON"] = "Show an icon for players without SilentRotate"
-L["DISPLAY_BLIND_ICON_DESC"] = "Adds a blind icon next to the player names who have not installed the addon. S/he will not be aware of the rotation and won't be synced if s/he's far from every other SilentRotate user."
+L["DISPLAY_BLIND_ICON"] = "Show an icon for players without RotationTracker"
+L["DISPLAY_BLIND_ICON_DESC"] = "Adds a blind icon next to the player names who have not installed the addon. S/he will not be aware of the rotation and won't be synced if s/he's far from every other RotationTracker user."
 L["DISPLAY_BLIND_ICON_TOOLTIP"] = "Show the blind icon tooltip"
 L["DISPLAY_BLIND_ICON_TOOLTIP_DESC"] = "You can disable this options to disable the tooltip while still having the icon"
 
     --- Tooltips
-L["TOOLTIP_PLAYER_WITHOUT_ADDON"] = "This player does not use SilentRotate"
+L["TOOLTIP_PLAYER_WITHOUT_ADDON"] = "This player does not use RotationTracker"
 L["TOOLTIP_MAY_RUN_OUDATED_VERSION"] = "Or runs an outdated version, older than 0.7.0"
 L["TOOLTIP_DISABLE_SETTINGS"] = "(You can disable the icon and/or the tooltip in the settings)"
 
     --- Notifications
 L["UPDATE_AVAILABLE"] = "A new version is available, please update to get the latest features."
-L["BREAKING_UPDATE_AVAILABLE"] = "A new, CRITICAL update is available, you MUST update AS SOON AS possible! SilentRotate may not work correctly between you and up-to-date players."
+L["BREAKING_UPDATE_AVAILABLE"] = "A new, CRITICAL update is available, you MUST update AS SOON AS possible! RotationTracker may not work correctly between you and up-to-date players."
 
     --- Profiles
 L["SETTING_PROFILES"] = "Profiles"

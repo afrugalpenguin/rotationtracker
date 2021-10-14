@@ -104,8 +104,8 @@ function SilentRotate:sendMessage(message, targetName, channelType, targetChanne
     SendChatMessage(message, channelType, nil, channelNumber or targetChannel)
 end
 
-SLASH_SILENTROTATE1 = "/sr"
-SLASH_SILENTROTATE2 = "/silentrotate"
+SLASH_SILENTROTATE1 = "/rt"
+SLASH_SILENTROTATE2 = "/rotationtracker"
 SlashCmdList["SILENTROTATE"] = function(msg)
     local _, _, cmd, args = string.find(msg, "%s?(%w+)%s?(.*)")
 
@@ -160,7 +160,7 @@ end
 -- @todo: remove this
 function SilentRotate:test()
     SilentRotate:printMessage('test')
-    SilentRotate:toggleArcaneShotTesting()
+    SilentRotate:toggleBOKTesting()
 end
 
 -- Open ace settings
@@ -214,7 +214,7 @@ end
 -- Print command options to chat
 function SilentRotate:printHelp()
     local spacing = '   '
-    SilentRotate:printMessage(SilentRotate:colorText('/silentrotate') .. ' commands options :')
+    SilentRotate:printMessage(SilentRotate:colorText('/rotationTracker') .. ' commands options :')
     SilentRotate:printMessage(spacing .. SilentRotate:colorText('toggle') .. ' : Show/Hide the main window')
     SilentRotate:printMessage(spacing .. SilentRotate:colorText('lock') .. ' : Lock the main window position')
     SilentRotate:printMessage(spacing .. SilentRotate:colorText('unlock') .. ' : Unlock the main window position')
@@ -244,20 +244,20 @@ function SilentRotate:isHunterPromoted(name)
     return false
 end
 
--- Toggle arcane shot testing mode
-function SilentRotate:toggleArcaneShotTesting(disable)
+-- Toggle Blessing of Kings testing mode
+function SilentRotate:toggleBOKTesting(disable)
 
     if (not disable and not SilentRotate.testMode) then
-        SilentRotate:printPrefixedMessage(L['ARCANE_SHOT_TESTING_ENABLED'])
+        SilentRotate:printPrefixedMessage(L['BOK_TESTING_ENABLED'])
         SilentRotate.testMode = true
 
         -- Disable testing after 60 minutes
         C_Timer.After(3600, function()
-            SilentRotate:toggleArcaneShotTesting(true)
+            SilentRotate:toggleBOKTesting(true)
         end)
     else
         SilentRotate.testMode = false
-        SilentRotate:printPrefixedMessage(L['ARCANE_SHOT_TESTING_DISABLED'])
+        SilentRotate:printPrefixedMessage(L['BOK_TESTING_DISABLED'])
     end
 
     SilentRotate:updateRaidStatus()

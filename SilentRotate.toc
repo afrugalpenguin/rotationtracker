@@ -2,7 +2,7 @@
 ## Title: ForkSilentRotate
 ## Notes: Track spell rotations in raid
 ## Author: Lightborn
-## Version: 0.2.1-beta
+## Version: 0.7.2-beta
 ## SavedVariables: SilentRotateDb
 ## OptionalDeps: Ace3
 

@@ -140,8 +140,8 @@ function SilentRotate:CreateConfig()
                         type = "header",
                         order = 10,
                     },
-                    ToggleArcaneShotTestingDesc = {
-                        name = L['ENABLE_ARCANE_SHOT_TESTING_DESC'],
+                    ToggleBOKTestingDesc = {
+                        name = L['ENABLE_BOK_TESTING_DESC'],
                         type = "description",
                         width = "full",
                         order = 11,
@@ -152,11 +152,11 @@ function SilentRotate:CreateConfig()
                         width = "full",
                         order = 12,
                     },
-                    ToggleArcaneShotTesting = {
-                        name = L["ENABLE_ARCANE_SHOT_TESTING"],
+                    ToggleBOKTesting = {
+                        name = L["ENABLE_BOK_TESTING"],
                         type = "execute",
                         order = 13,
-                        func = function() SilentRotate.toggleArcaneShotTesting() end
+                        func = function() SilentRotate.toggleBOKTesting() end
                     },
                     showBlindIcon = {
                         name = L["DISPLAY_BLIND_ICON"],
